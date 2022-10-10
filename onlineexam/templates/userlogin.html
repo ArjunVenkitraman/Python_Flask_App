@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+User Page
+{% endblock %}
+{% block nav %}
+
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<form class="form-login" method="POST" style="color:white">
+    {{ form.hidden_tag() }}
+    <br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHVUh1WCgY5lNRWOiRJKT21zDw9pzFXYPi8w&usqp=CAU">
+
+    <br>
+    <h1 class="h3 mb-3 font-weight-normal">
+        Please Login
+    </h1>
+    <h4 style="font-style=ms gothic; color:#00FFFF">No account? Create one <a style="font-weight:bold; font-style=Impact; color=#8B008B" href="{{url_for('add_user')}}">
+        Here</a></h4>
+    <br>
+    {{ form.uname.label() }}
+    {{ form.uname(class="form-control", placeholder="User Name")}}
+    <br>
+    {{ form.password.label() }}
+    {{ form.password(class="form-control", placeholder="Password")}}
+    <br>
+    {{ form.login(class="btn btn-lg btn-primary") }}
+
+</form>
+
+{% endblock %}

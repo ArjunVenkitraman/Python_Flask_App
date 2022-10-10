@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+    Create Account
+{% endblock %}
+{% block nav %}
+
+{% endblock %}
+{% block content %}
+      <body class="text-center">
+
+      <div class="container">
+            <h3 style="font-style=ms gothic; color:#FF8C00">Create Account</h3>
+            <form method="POST" class ="form-login" style="color:#2F4F4F">
+                  {{ form.hidden_tag() }}
+
+
+            {{ form.hidden_tag() }}
+
+
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name")}}
+            {{ form.emailid.label() }}
+            {{ form.emailid(class='form-control', placeholder="Enter Email-Id")}}
+            {{ form.gender.label() }}
+            {{ form.gender(class="form-control", placeholder="Gender, Enter 'male' or 'female'")}}
+
+            {{ form.userpass.label() }}
+            {{ form.userpass(class="form-control", placeholder="Password")}}
+
+            {{ form.userconfirm.label() }}
+            {{ form.userconfirm(class="form-control", placeholder="Confirm Password")}}
+            {{ form.phone.label() }}
+            {{ form.phone(class="form-control", placeholder="Phone Number")}}
+            <br>
+            {{ form.register(class="btn btn-lg btn-primary") }}
+        </form>
+      </div>
+      </body>
+{% endblock %}

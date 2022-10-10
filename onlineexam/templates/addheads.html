@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+    Add Heads
+{% endblock %}
+{% block nav %}
+<h3 style="font-style=ms gothic; color:#7FFF00">Add Heads Here</h3>
+{% endblock %}
+{% block content %}
+      <body class="text-center">
+      <div class="container">
+            <form method="POST" class ="form-login" style="color:#DC143C">
+                  {{ form.hidden_tag() }}
+
+
+                  <br>
+                  {{ form.headuid.label() }}
+                  {{ form.headuid(class="form-control", placeholder="Head User ID")}}
+                  <br>
+                  {{ form.deptname.label() }}
+                  {{ form.deptname(class="form-control", placeholder="Department Name")}}
+                  <br>
+                  <br>
+                  {{ form.headname.label() }}
+                  {{ form.headname(class="form-control", placeholder="Name of The Head")}}
+                  <br>
+                  {{ form.hpassword.label() }}
+                  {{ form.hpassword(class="form-control", placeholder="Password")}}
+                  <br>
+                  {{ form.confpass.label() }}
+                  {{ form.confpass(class="form-control", placeholder="Password")}}
+                  <br>
+
+                  <br>
+                  {{ form.addhead(class="btn btn-lg btn-primary") }}
+            </form>
+      </div>
+      </body>
+{% endblock %}

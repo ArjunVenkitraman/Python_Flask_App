@@ -1,0 +1,56 @@
+{% extends 'headhome.html' %}
+{% block title %}
+    Add Exams
+{% endblock %}
+
+{% block content %}
+<style>
+    .vertical{
+        border-left: 6px solid blue;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        }
+    .txt{
+        color:#1E90FF;
+        text-decoration-style: solid;
+        background-color:#E0FFFF;
+        position:center;
+       }
+</style>
+      <div class=" justify-content-center">
+
+            <form method="POST" class ="form-login txt" style="">
+                  {{ form.hidden_tag() }}
+
+                  <br>
+                  <h1 class="h3 mb-3 font-weight-thick">
+                       Add Exams Here
+                  </h1>
+
+                  <br>
+                  {{ form.examcode.label() }}
+                  {{ form.examcode(class="form-control", placeholder="Exam Code")}}
+
+                  {{ form.examname.label() }}
+                  {{ form.examname(class="form-control", placeholder="Name of the Exam")}}
+
+                  {{ form.description.label() }}
+                  {{ form.description(class="form-control", placeholder="Description of the Exam")}}
+
+                  {{ form.examfee.label() }}
+                  {{ form.examfee(class="form-control", placeholder="Exam Fees")}}
+                  {{ form.examdate.label() }}
+                  {{ form.examdate(class="form-control", placeholder="Exam date") }}
+                  {{ form.findate.label() }}
+                  {{ form.findate(class="form-control", placeholder="Last Date to apply") }}
+                  {{ form.requirements.label() }}
+                  {{ form.requirements(class="form-control", placeholder="Requirements for Registration") }}
+                  {{ form.addexam(class="btn btn-lg btn-primary") }}
+
+            </form>
+      </div>
+
+
+
+{% endblock %}

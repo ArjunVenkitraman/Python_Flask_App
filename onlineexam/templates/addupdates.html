@@ -1,0 +1,24 @@
+{% extends 'adminhome.html' %}
+{% block title %}
+    Add Updates
+{% endblock %}
+{% block nav %}
+<h3 style="font-style=ms gothic; color:#0000CD ">Add Updates</h3>
+{% endblock %}
+{% block content %}
+      <body class="text-center">
+      <div class="container">
+            <form method="POST" class ="form-login" style="color:cyan">
+
+                   {{ form.hidden_tag() }}
+
+                  <br>
+                  {{ form.description.label() }}
+                  {{ form.description(class="form-control", placeholder="Enter Your Updates")}}
+                  <br>
+                  <br>
+                  {{ form.addupdate(class="btn btn-lg btn-primary") }}
+            </form>
+      </div>
+      </body>
+{% endblock %}

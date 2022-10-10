@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+Head Login
+{% endblock %}
+{% block nav %}
+<h3 style="font-style=ms gothic; color:	#00ff7f">Enter Your Credentials</h3>
+{% endblock %}
+{% block content %}
+    <body class="text-center">
+
+            <form method="POST" class ="form-login" style="color:#40e0d0">
+                  {{ form.hidden_tag() }}
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHVUh1WCgY5lNRWOiRJKT21zDw9pzFXYPi8w&usqp=CAU">
+
+                  <br>
+                  <h1 class="h3 mb-3 font-weight-normal">
+                        Please Login
+                  </h1>
+                  <br>
+                  {{ form.headname.label() }}
+                  {{ form.headname(class="form-control", placeholder="Head Name")}}
+                  <br>
+                  {{ form.hpassword.label() }}
+                  {{ form.hpassword(class="form-control", placeholder="Password")}}
+                  <br>
+                  {{ form.hlogin(class="btn btn-lg btn-primary") }}
+            </form>
+    </body>
+
+{% endblock %}
