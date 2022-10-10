@@ -81,7 +81,7 @@ def head_login():
                 return redirect(url_for('head_page'))
             else:
                 flash("No users Found! Login Again")
-                redirect(url_for('lead_login'))
+                redirect(url_for('head_login'))
     return render_template('headlogin.html', form=form)
 
 
